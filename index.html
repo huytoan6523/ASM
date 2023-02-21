@@ -38,7 +38,8 @@
         $locationProvider.hashPrefix("");
         $routeProvider
         .when("/home",{
-          templateUrl:"home.html"
+          templateUrl:"home.html",
+          controller:quanAoController,
         })
         .when("/login",{
           templateUrl:"login.html"
@@ -46,8 +47,12 @@
         .when("/register",{
           templateUrl:"register.html"
         })
-        .when("/detail",{
-          templateUrl:"detail.html"
+        .when("/gioHang",{
+          templateUrl:"gioHang.html"
+        })
+        .when("/detail/:id",{
+          templateUrl:"detail.html",
+          controller:detailPro,
         });
 
 
@@ -56,7 +61,7 @@
 
     </script>
 
-    
+    <script src="quanAo.js"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
